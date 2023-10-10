@@ -1,0 +1,43 @@
+﻿@using StephenBookShelf.Models
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>BookId</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Author</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Rbd in Model)
+        {
+            <tr>
+                <td>@Rbd.BookId</td>
+                <td>@Rbd.Title</td>
+                <td>@Rbd.Category</td>
+                <td>@Rbd.Author</td>
+                <td>@Rbd.Price</td>
+            </tr>
+        }
+
+        <tr>
+            <td>Total:</td>
+            <td>Total: @ViewBag.Total</td>
+        </tr>
+        
+        <tr>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="CleartheCart">
+                <strong> Clear the cart</strong>
+            </a>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<div class="text-right">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>Click here to Go to Home Page</strong></a>
+</div>

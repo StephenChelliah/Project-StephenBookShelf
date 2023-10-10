@@ -1,0 +1,28 @@
+﻿@using StephenBookShelf.Models;
+
+
+<h3>You have added the Below Book to your Cart</h3>
+
+<br>
+<br>
+<div class="row">
+    <div class="col">
+        <strong>Title : </strong>
+    </div>
+    <div class="col">
+        <strong>@Model.Title </strong>
+    </div>
+</div>
+    <div class="row">
+        <div class="col">
+        <strong>Price : </strong>
+        </div>
+        <div class="col">
+        <strong>@Model.Price </strong>
+        </div>
+    </div>
+
+
+<div class="text-right">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>Click here to Go to Home Page</strong></a>
+</div>

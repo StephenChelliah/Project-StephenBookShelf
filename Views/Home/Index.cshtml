@@ -1,0 +1,113 @@
+﻿@using StephenBookShelf.Models;
+@model StephenBookShelf.Models.BookModel;
+
+<h1>Stephen BookShelf</h1>
+
+<h3>A Place where you can purchase a variety of books at an Affordable Price</h3>
+
+<form method="post" asp-action="Search" asp-controller="Bookstore">
+    <div class="text-right">
+        <label for="Name">Search :</label>
+        <input type="text" id="Name" name="keyword" placeholder="Type the BookName or Name of the Author or Title or Category" />
+    </div>
+
+
+    <div class="text-right">
+        <button type="submit"><strong>Search</strong></button>
+    </div>
+    <br>
+</form>
+
+<br>
+<br>
+<br>
+<div class="text-right">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="YourCart"><strong>Your Cart</strong></a>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="1">
+        <img src="~/images/Baskervile Hall.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>SherLockHolmesBaskervileHall</strong></span>
+    </a>
+</div>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="2">
+        <img src="~/images/Art of the Deal.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>Art of the Deal</strong></span>
+    </a>
+</div>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="3">
+        <img src="~/images/Confessions of An Economic Hitman.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>Confessions of An Economic Hitman</strong></span>
+    </a>
+</div>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="4">
+        <img src="~/images/MurderontheOrientExpress.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>Murder on the Orient Express</strong></span>
+    </a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="5">
+        <img src="~/images/Never Give an Inch Fighting for the America I Love.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>Never Give an Inch Fighting for the America I Love</strong></span>
+    </a>
+</div>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="6">
+        <img src="~/images/rich dad poor dad.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>Rich Dad Poor Dad</strong></span>
+    </a>
+</div>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="7">
+        <img src="~/images/The Guns of August.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>The Guns of August</strong></span>
+    </a>
+</div>
+
+<div class="image-container">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Bookstore" asp-action="Details" asp-route-BookId="8">
+        <img src="~/images/War and Peace.jpg" alt="Image not found" />
+        <span class="image-heading"><strong>War and Peace</strong></span>
+    </a>
+</div>
+
+
+
+
+<style>
+
+    .image-container {
+        height: 400px;
+        width: 300px;
+        display: inline-block
+    }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.2);
+        }
+</style>
+
+
